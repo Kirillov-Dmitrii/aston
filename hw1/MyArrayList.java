@@ -22,20 +22,20 @@ public class MyArrayList<E> implements Iterable {
         }
     }
 
-    public MyArrayList(Collection<? extends E> collection) {
-        Object[] arr = collection.toArray();
-        size = arr.length;
-
-        if (size != 0) {
-            if (collection.getClass() == MyArrayList.class) {
-                this.elementData = arr;
-            } else {
-                this.elementData = Arrays.copyOf(arr, size, Object[].class);
-            }
-        } else {
-            this.elementData = EMPTY_ELEMENT_DATA;
-        }
-    }
+//    public MyArrayList(Collection<? extends E> collection) {
+//        Object[] arr = collection.toArray();
+//        size = arr.length;
+//
+//        if (size != 0) {
+//            if (collection.getClass() == MyArrayList.class) {
+//                this.elementData = arr;
+//            } else {
+//                this.elementData = Arrays.copyOf(arr, size, Object[].class);
+//            }
+//        } else {
+//            this.elementData = EMPTY_ELEMENT_DATA;
+//        }
+//    }
 
 
     private Object[] grow(Object[] elementData) {
